@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Alisher Karimov",   "phone": "+998901234567", "role": "Direktor",  "color": "#6c63ff" },
+  { "id": 2, "name": "Dilnoza Yusupova",  "phone": "+998911111111", "role": "Menejer",   "color": "#ff6b6b" },
+  { "id": 3, "name": "Bobur Rahimov",     "phone": "+998901231111", "role": "Ishchi",    "color": "#43e97b" },
+  { "id": 4, "name": "Malika Toshmatova", "phone": "+998771234567", "role": "Muhasib",   "color": "#f7971e" },
+  { "id": 5, "name": "Jasur Nazarov",     "phone": "+998931234567", "role": "Texnik",    "color": "#c471ed" },
+  { "id": 6, "name": "Sarvinoz Holiqova", "phone": "+998951234567", "role": "HR",        "color": "#12c2e9" },
+  { "id": 7, "name": "Mirzo Askarov",     "phone": "+998881234567", "role": "Dasturchi", "color": "#f64f59" },
+  { "id": 8, "name": "Zulfiya Ergasheva", "phone": "+998901112233", "role": "Dizayner",  "color": "#43e97b" }
+]
