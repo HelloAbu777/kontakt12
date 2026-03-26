@@ -37,9 +37,15 @@ export async function POST(req: NextRequest) {
 export async function GET() {
   const { data, error } = await supabase
     .from("sms_logs")
-    .select("*, contacts(name, role)")
+    .select("id, phone, message, sent_at, contact_id, contacts(name, role)")
     .order("sent_at", { ascending: false })
     .limit(100);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json(data);
+
+  // flatten contacts join
+  const logs = (data ?? []).map((l: Record<string, unknown>) => {
+    const c = l.contacts as { name?: string; role?: string } | null;
+    return { ...l, name: c?.name ?? "", role: c?.role ?? "", contacts: undefined };
+  });
+  return NextResponse.json(logs);
 }
